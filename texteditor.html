@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple Text Editor</title>
+
+    <!-- FONT AWESOME -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    
+
+    <link rel="stylesheet" href='texteditor.css'>
+    
+</head>
+<body>
+    <p>Simple Text Editor</p>
+    <div class='row' id='styling'>
+        <span class='grouping' id='first'>
+            <button id='bold'><i class='fas fa-bold fa-2x'></i></button>
+            <button id='italic'><i class='fas fa-italic fa-2x'></i></button>
+            <button id='underline'><i class='fas fa-underline fa-2x'></i></button>
+        </span>
+        <span class='grouping' id='second'>
+            <button id='left'><i class='fas fa-align-left fa-2x'></i></button>
+            <button id='center'><i class='fas fa-align-center fa-2x'></i></button>
+            <button id='right'><i class='fas fa-align-right fa-2x'></i></button>
+        </span>
+        <span class='grouping' id='third'>         
+            <button id='font'><i class='fas fa-font fa-2x'></i></button>
+            <button id='undo'><i class='fas fa-undo fa-2x'></i></button>
+        </span>
+    </div>
+
+    <div class='row'>
+        <div id='textArea'>Edit text here or type your own.</div>
+    </div>
+
+    <div class='row' id='commands'>
+        <span id='loadSpan'><input type='file' value='LOAD' id='load'></span>
+        <span><input type='button' value='SAVE' onclick="download('test.txt', ta.innerHTML)"></span>
+        <span><input type='button' value='CLEAR' onclick="clearText()"></span>
+    </div>
+
+    <script src='texteditor.js'></script>
+</body>
+</html>
